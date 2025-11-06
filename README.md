@@ -13,6 +13,22 @@ Below is my RIB which looks like it came straight from an ugly DIY projects cont
 
 ![](fig/rib.jpg)
 
+Alternatively, you can use off-the-shelf equipment as mentioned below.
+
+Tested RIBs:
+
+- [RLN4008B Programming Interface Box RIB For Motorola](https://www.ebay.com/itm/365265881999)
+  - [UL Listed 9V AC Power Adapter](https://www.amazon.com/dp/B06Y1LF8T5)
+
+Tested Programming Cables (need RIB):
+
+- [Programming Cable Motorola Radius Maxtrac GM300 M1225 CDM CDM1250 CM200 CM300](https://www.ebay.com/itm/350585751560)
+
+Tested USB/Serial Adapters:
+
+- [TRENDnet USB to Serial 9-Pin Converter Cable, TU-S9](https://www.amazon.com/dp/B0007T27H8/)
+
+**Note:** Under Linux, USB/Serial adapters with the Prolific chipset work just fine for programming your radio. You do not necessarily need an adapter with an FTDI chipset.
 
 ## Make sure your user can access /dev/ttyUSB0
 
