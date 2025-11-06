@@ -37,7 +37,7 @@ Just clone this repository and call `./run.sh`.
 On Debian/Ubuntu, you first need to install `git` and `docker`, then add yourself to the `docker` group:
 
 ```
-sudo update && sudo apt install docker-compose git`
+sudo update && sudo apt install docker-compose git
 sudo usermod -aG docker $USER
 exec su -l $USER
 ```
