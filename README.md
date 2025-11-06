@@ -18,12 +18,46 @@ Below is my RIB which looks like it came straight from an ugly DIY projects cont
 
 Depending on your Linux distro, you might have to add yourself to the `uucp` or `dialout` groups.
 
+On Debian/Ubuntu, this would be done with:
+
+```
+sudo usermod -aG dialout $USER
+exec su -l $USER
+```
+
+Depending on your distro you may have better results logging out with `exit` and logging back in or simply rebooting with `sudo reboot now`.
+
 If you get yourself in despair and want a quick hack, you may just `chmod 0666 /dev/ttyUSB0`.
 
 
 ## Run the container
 
 Just clone this repository and call `./run.sh`.
+
+On Debian/Ubuntu, you first need to install `git` and `docker`, then add yourself to the `docker` group:
+
+```
+sudo update && sudo apt install docker-compose git
+sudo usermod -aG docker $USER
+exec su -l $USER
+```
+
+Then clone the repository, change to the directory, and run the script:
+
+```
+git clone https://github.com/thotypous/gm300-dosbox.git
+cd gm300-dosbox
+./run.sh
+```
+
+If you don't see DOSBox boot up, your user may not have access to the `X` server.  
+Here is a command that allows local users on the machine access:
+
+```
+xhost local:
+```
+
+You can then try running `./run.sh` again.
 
 
 ## Follow the steps
